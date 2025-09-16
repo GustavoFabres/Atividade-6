@@ -63,37 +63,37 @@ const Remover = (buttonV) => {
 
     return(
       <>
-      {Carregando && <h1><VscSync /></h1>}
+      {Carregando && <h1 className="carregar"><VscSync /></h1>}
         {!Carregando && <ul className="carrinho">
-            {Produtos[0][6] && <li className={Altera}>
+            {Produtos[0][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[0][1]}</strong> 
             <p>Preço: {Produtos[0][2]}</p>
-            <button onClick={() => Remover(1)}>Remover</button>
+            <button className="remover" onClick={() => Remover(1)}>Remover</button>
             </li >}
-                        {Produtos[1][6] && <li className={Altera}>
+                        {Produtos[1][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[1][1]}</strong> 
             <p>Preço: {Produtos[1][2]}</p>
-            <button onClick={() => Remover(2)}>Remover</button>
+            <button className="remover" onClick={() => Remover(2)}>Remover</button>
             </li>}
-                        {Produtos[2][6] && <li className={Altera}>
+                        {Produtos[2][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[2][1]}</strong> 
             <p>Preço: {Produtos[2][2]}</p>
-            <button onClick={() => Remover(3)}>Remover</button>
+            <button className="remover" onClick={() => Remover(3)}>Remover</button>
             </li>}
-                        {Produtos[3][6] && <li className={Altera}>
+                        {Produtos[3][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[3][1]}</strong> 
             <p>Preço: {Produtos[3][2]}</p>
-            <button onClick={() => Remover(4)}>Remover</button>
+            <button className="remover" onClick={() => Remover(4)}>Remover</button>
             </li>}
-                        {Produtos[4][6] && <li className={Altera}>
+                        {Produtos[4][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[4][1]}</strong> 
             <p>Preço: {Produtos[4][2]}</p>
-            <button onClick={() => Remover(5)}>Remover</button>
+            <button className="remover" onClick={() => Remover(5)}>Remover</button>
             </li>}
-                        {Produtos[5][6] && <li className={Altera}>
+                        {Produtos[5][6] && <li className={`listaCarrinho ${Altera}`}>
                 <strong>{Produtos[5][1]}</strong> 
             <p>Preço: {Produtos[5][2]}</p>
-            <button onClick={() => Remover(6)}>Remover</button>
+            <button className="remover" onClick={() => Remover(6)}>Remover</button>
             </li>}
         </ul>}
       </>

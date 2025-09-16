@@ -42,16 +42,16 @@ export function NavBar1() {
   }, [Tema])
 
     return(
-    <nav className={Altera}>
-      <h4 ><GiBirdTwitter size={50} /> HenShopp</h4>
+    <nav className={`nave ${Altera}`}>
+      <h4 className={`logo  ${Altera}`}><GiBirdTwitter size={50} /> HenShopp</h4>
       <div>
-           <NavLink onClick={AtivarCarregamento} className={Altera} to={"/"} ><strong>Loja</strong></NavLink>
-            <NavLink onClick={AtivarCarregamento}  className={Altera} to={"/Carrinho"} ><strong>Carrinho</strong ></NavLink>
+           <NavLink  onClick={AtivarCarregamento} className={`navLink ${Altera}`} to={"/"} ><strong>Loja</strong></NavLink>
+            <NavLink onClick={AtivarCarregamento}  className={`navLink ${Altera}`} to={"/Carrinho"} ><strong>Carrinho</strong ></NavLink>
       </div>
-      <p onClick={trocarTema}>{<TiAdjustContrast size={50}/>}</p>
+      <p className="tema" onClick={trocarTema}>{<TiAdjustContrast size={50}/>}</p>
       
       
-        <p>{Contador}</p>
+        <p className="contador">{Contador}</p>
         
     </nav>
     ) 

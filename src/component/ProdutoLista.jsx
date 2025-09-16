@@ -120,16 +120,16 @@ const Adicionar = (buttonV) => {
 
     return(
       <>
-      {Carregando && <h1><VscSync /></h1>}
-         {!Carregando && <ul>
+      {Carregando && <h1 className="carregar"><VscSync /></h1>}
+         {!Carregando && <ul className="listaProduto">
             
-                  <li onClick={() => NavegarTecla(button1)} className={Altera}>
+                  <li onClick={() => NavegarTecla(button1)} className={`produtoLista  ${Altera}`}>
                     <div>
-                  <strong>{Produtos[0][1]}</strong>
+                  <strong className="produto">{Produtos[0][1]}</strong>
 
                     </div>
-                  <p> {Produtos[0][2]} </p>
-                  <p>
+                  <p className="preco"> {Produtos[0][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStar/>}
                     {<TiStar/>}
@@ -137,14 +137,14 @@ const Adicionar = (buttonV) => {
                     {<TiStarOutline/>}
                   </p>
                   <p>{Produtos[0][4]}</p>
-                  <img src={Produtos[0][5]} alt={Produtos[0][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button1} onClick={() => Adicionar(1)} disabled={estaDesabilitado1}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[0][5]} alt={Produtos[0][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button1} onClick={() => Adicionar(1)} disabled={estaDesabilitado1}>Adicionar</button>
                   
                 </li>
-                 <li onClick={() => NavegarTecla(button2)} className={Altera}>
-                  <strong>{Produtos[1][1]}</strong>
-                  <p>Preço: {Produtos[1][2]} </p>
-                  <p>
+                 <li onClick={() => NavegarTecla(button2)} className={`produtoLista  ${Altera}`}>
+                  <strong className="produto">{Produtos[1][1]}</strong>
+                  <p className="preco">Preço: {Produtos[1][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStar/>}
                     {<TiStarHalfOutline/>}
@@ -152,13 +152,13 @@ const Adicionar = (buttonV) => {
                     {<TiStarOutline/>}
                   </p>
                   <p>{Produtos[1][4]}</p>
-                  <img src={Produtos[1][5]} alt={Produtos[1][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button2} onClick={() => Adicionar(2)} disabled={estaDesabilitado2}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[1][5]} alt={Produtos[1][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button2} onClick={() => Adicionar(2)} disabled={estaDesabilitado2}>Adicionar</button>
                 </li>
-                 <li onClick={() => NavegarTecla(button3)} className={Altera}>
-                  <strong>{Produtos[2][1]}</strong>
-                  <p>Preço: {Produtos[2][2]} </p>
-                  <p>
+                 <li onClick={() => NavegarTecla(button3)} className={`produtoLista  ${Altera}`}>
+                  <strong className="produto">{Produtos[2][1]}</strong>
+                  <p className="preco">Preço: {Produtos[2][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStar/>}
                     {<TiStar/>}
@@ -166,13 +166,13 @@ const Adicionar = (buttonV) => {
                     {<TiStarOutline/>}
                   </p>
                   <p>{Produtos[2][4]}</p>
-                  <img src={Produtos[2][5]} alt={Produtos[2][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button3} onClick={() => Adicionar(3)} disabled={estaDesabilitado3}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[2][5]} alt={Produtos[2][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button3} onClick={() => Adicionar(3)} disabled={estaDesabilitado3}>Adicionar</button>
                 </li>
-                 <li  onClick={() => NavegarTecla(button4)} className={Altera}>
-                  <strong>{Produtos[3][1]}</strong>
-                  <p>Preço: {Produtos[3][2]} </p>
-                  <p>
+                 <li  onClick={() => NavegarTecla(button4)} className={`produtoLista  ${Altera}`}>
+                  <strong className="produto">{Produtos[3][1]}</strong>
+                  <p className="preco">Preço: {Produtos[3][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStar/>}
                     {<TiStar/>}
@@ -180,13 +180,13 @@ const Adicionar = (buttonV) => {
                     {<TiStarHalfOutline/>}
                   </p>
                   <p>{Produtos[3][4]}</p>
-                  <img src={Produtos[3][5]} alt={Produtos[3][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button4} onClick={() => Adicionar(4)} disabled={estaDesabilitado4}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[3][5]} alt={Produtos[3][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button4} onClick={() => Adicionar(4)} disabled={estaDesabilitado4}>Adicionar</button>
                 </li>
-                <li onClick={() => NavegarTecla(button5)} className={Altera}>
-                  <strong>{Produtos[4][1]}</strong>
-                  <p>Preço: {Produtos[4][2]} </p>
-                  <p>
+                <li onClick={() => NavegarTecla(button5)} className={`produtoLista  ${Altera}`}>
+                  <strong className="produto">{Produtos[4][1]}</strong>
+                  <p className="preco">Preço: {Produtos[4][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStar/>}
                     {<TiStar/>}
@@ -194,13 +194,13 @@ const Adicionar = (buttonV) => {
                     {<TiStar/>}
                   </p>
                   <p>{Produtos[4][4]}</p>
-                  <img src={Produtos[4][5]} alt={Produtos[4][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button5} onClick={() => Adicionar(5)} disabled={estaDesabilitado5}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[4][5]} alt={Produtos[4][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button5} onClick={() => Adicionar(5)} disabled={estaDesabilitado5}>Adicionar</button>
                 </li>
-                <li onClick={() => NavegarTecla(button6)} className={Altera}>
-                  <strong>{Produtos[5][1]}</strong>
-                  <p>Preço: {Produtos[5][2]} </p>
-                  <p>
+                <li onClick={() => NavegarTecla(button6)} className={`produtoLista  ${Altera}`}>
+                  <strong className="produto">{Produtos[5][1]}</strong>
+                  <p className="preco">Preço: {Produtos[5][2]} </p>
+                  <p className="avaliacao">
                     {<TiStar/>}
                     {<TiStarOutline/>}
                     {<TiStarOutline/>}
@@ -208,8 +208,8 @@ const Adicionar = (buttonV) => {
                     {<TiStarOutline/>}
                   </p>
                   <p>{Produtos[5][4]}</p>
-                  <img src={Produtos[5][5]} alt={Produtos[5][1]} />
-                  <button onKeyDown={NavegarTeclaVerdade} ref={button6} onClick={() => Adicionar(6)} disabled={estaDesabilitado6}>Adicionar</button>
+                  <img className="imagemProduto" src={Produtos[5][5]} alt={Produtos[5][1]} />
+                  <button className="buttonAdicionar" onKeyDown={NavegarTeclaVerdade} ref={button6} onClick={() => Adicionar(6)} disabled={estaDesabilitado6}>Adicionar</button>
                 </li>
           </ul>}
       </>

@@ -1,0 +1,58 @@
+import { NavLink } from "react-router-dom";
+import { TiAdjustContrast } from "react-icons/ti";
+import { useEffect, useState, useContext} from "react";
+import { ContadorContext } from "./Context";
+import { TemaDark } from "./Context";
+import { AlterarTemaContext } from "./Context";
+import { GiBirdTwitter } from "react-icons/gi";
+import { CarregandoContext } from "./Context";
+
+
+
+export function NavBar1() {
+  const {Contador , setContador} = useContext(ContadorContext);
+  const {Tema , setTema} = useContext(TemaDark);
+  const {Altera , setAltera} = useContext(AlterarTemaContext);
+  const {Carregando, setCarregando} = useContext(CarregandoContext);
+
+  function delay(ms) {
+  return new Promise(resolve => setTimeout(resolve, ms));
+  }
+
+  const AtivarCarregamento = async() => {
+    setCarregando(true)
+    await delay(2000);
+    setCarregando(false)
+  }
+
+  const trocarTema = () => {
+    Tema == false ? setTema(true) : setTema(false);
+    console.log(Tema)
+  }
+  const AlterarTema = async() => {
+       if (Tema == true) {
+          setAltera("dark")
+    } else {
+          setAltera(null)
+    }
+    console.log("oi")
+  }
+  useEffect(() => {
+    AlterarTema();
+  }, [Tema])
+
+    return(
+    <nav className={`nave colorPrincipal2 bordaCircular itemFlexRowCenter tamanho60px duracaoAnimacao sombra alinhaCentro separarG15 ${Altera}`}>
+      <h4 className={`colorC2  ${Altera}`}><GiBirdTwitter size={50} /> HenShopp</h4>
+      <div>
+           <NavLink  onClick={AtivarCarregamento} className={`pading100 textoNone corTextoPreto ${Altera}`} to={"/"} ><strong>Loja</strong></NavLink>
+            <NavLink onClick={AtivarCarregamento}  className={`pading100 textoNone corTextoPreto ${Altera}`} to={"/Carrinho"} ><strong>Carrinho</strong ></NavLink>
+      </div>
+      <p className="tema duracaoAnimacao" onClick={trocarTema}>{<TiAdjustContrast size={50}/>}</p>
+      
+      
+        <p className="contador">{Contador}</p>
+        
+    </nav>
+    ) 
+}

@@ -1,0 +1,249 @@
+body{
+    
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2%;
+    transition-duration: 1s;
+    
+
+}
+
+ 
+
+body.dark{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 35, 35);
+    text-align: center;
+    padding: 2%;
+    transition-duration: 1s;
+
+}
+.logo.dark{
+    color: rgb(147, 188, 224)
+}
+.logo{
+    color: rgb(4, 138, 138);
+
+}
+
+.imagemProduto{
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+.buttonAdicionar{
+
+  padding: 10px 20px; 
+  border-radius: 10px; 
+  cursor: pointer; 
+  text-decoration: none;
+  background-color: transparent; 
+  color: #0b6ed8; 
+  border: 2px solid #0161c7; 
+  cursor: pointer; 
+}
+.buttonAdicionar:focus{
+       
+    background-color: rgb(198, 255, 252);
+    transition-duration: 0.3s;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+    outline: none;
+}
+.buttonAdicionar:hover{
+    transition-duration: 0.3s;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+    background-color: #007bff; /* Mudar cor de fundo */
+    color: white; /* Mudar cor do texto para branco */
+}
+.buttonAdicionar:disabled{
+    background-color: rgb(66, 66, 66);
+    color: white;
+    pointer-events: none;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+.buttonAdicionar:disabled:hover{
+    background-color: rgb(37, 37, 37);
+    
+}
+.navLink{
+    text-decoration: none;
+    color: black;
+    padding: 100px;
+    height: 1px;
+    width: 1px;
+    border: 0%;
+    margin: 0%;
+
+}
+.navLink.dark{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 100px;
+    height: 1px;
+    width: 1px;
+    border: 0%;
+    margin: 0%;
+}
+.nave{
+    background-color: rgb(30, 207, 207);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+    transition-duration: 1s;
+
+}
+.nave.dark{
+    background-color: rgb(12, 122, 122);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgb(82, 79, 79);
+    transition-duration: 1s;
+}
+.tema {
+    transition-duration: 0.5s;
+}
+.nave.dark.tema {
+    transition-duration: 0.5s;
+
+}
+.tema:hover {
+    color: rgb(255, 255, 255);
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+    
+
+}
+.nave.dark .tema :hover {
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+    cursor: pointer;
+
+}
+.navLink:hover{
+        color: rgb(198, 255, 252);
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+.navLink.dark :hover{
+        color: rgb(117, 216, 255);
+        transition-duration: 0.5s;
+        cursor: pointer;
+    }
+
+
+
+.listaProduto{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+.carrinho{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+.produtoLista{
+    background-color: rgb(141, 180, 224);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgb(82, 79, 79);
+    height: 410px;
+    transition-duration: 1s;
+
+    
+}
+.produtoLista.dark{
+    background-color: rgb(35, 64, 80);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    height: 410px;
+    box-shadow: 0px 0px 0px rgb(82, 79, 79);
+    transition-duration: 1s;
+
+}
+.produtoLista.dark .buttonAdicionar {
+    border-color: rgb(113, 205, 255);
+    color: rgb(113, 205, 255);
+}
+.produtoLista.dark .buttonAdicionar:hover {
+    background-color: #a1c7f0;
+    border-color: rgb(113, 205, 255);
+    color: rgb(0, 0, 0);
+}
+.listaCarrinho {
+    background-color: rgb(141, 180, 224);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgb(82, 79, 79);
+    height: 100px;
+    transition-duration: 1s;
+}
+.listaCarrinho.dark{
+    background-color:  rgb(35, 64, 80);
+}
+.carregar {
+ animation: girar 2s linear infinite;
+ color: rgb(35, 173, 207);
+ 
+}
+.remover{
+    background-color: rgb(57, 141, 141); 
+  padding: 10px 20px; 
+  border: 1px solid rgb(141, 180, 224); 
+  border-radius: 10px; 
+  cursor: pointer; 
+  text-decoration: none;
+}
+.remover:hover{
+    background-color: rgb(219, 22, 22);
+    transition-duration: 0.3s;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+}
+@media (max-width: 1024px){
+    ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px){
+    ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px){
+    ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}

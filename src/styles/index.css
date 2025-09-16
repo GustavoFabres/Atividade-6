@@ -1,0 +1,251 @@
+body{
+    
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: black;
+    background-color: rgb(255, 255, 255);
+    text-align: center;
+    padding: 2%;
+    transition-duration: 1s;
+    
+
+}
+
+ 
+
+body.dark{
+    font-family: Arial, "Helvetica Neue", Helvetica, sans-serif;
+    color: rgb(255, 255, 255);
+    background-color: rgb(37, 35, 35);
+    text-align: center;
+    padding: 2%;
+    transition-duration: 1s;
+
+}
+nav.dark h4{
+    color: rgb(147, 188, 224)
+}
+h4{
+    color: rgb(4, 138, 138);
+
+}
+
+img{
+    border-radius: 8px;
+    width: 200px;
+    height: 200px;
+}
+button{
+
+  background-color: rgb(57, 141, 141); 
+  padding: 10px 20px; 
+  border: 1px solid rgb(141, 180, 224); 
+  border-radius: 10px; 
+  cursor: pointer; 
+  text-decoration: none;
+}
+button:focus{
+       
+    background-color: rgb(198, 255, 252);
+    transition-duration: 0.3s;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+    outline: none;
+}
+button:hover{
+    background-color: rgb(198, 255, 252);
+    transition-duration: 0.3s;
+    width: 100px;
+    height: 40px;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+}
+button:disabled{
+    background-color: rgb(66, 66, 66);
+    color: white;
+    pointer-events: none;
+    cursor: not-allowed; 
+    opacity: 0.6; 
+}
+button:disabled:hover{
+    background-color: rgb(37, 37, 37);
+    
+}
+a{
+    text-decoration: none;
+    color: black;
+    padding: 100px;
+    height: 1px;
+    width: 1px;
+    border: 0%;
+    margin: 0%;
+
+}
+a.dark{
+    text-decoration: none;
+    color: rgb(255, 255, 255);
+    padding: 100px;
+    height: 1px;
+    width: 1px;
+    border: 0%;
+    margin: 0%;
+}
+nav{
+    background-color: rgb(30, 207, 207);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 3px 3px rgb(82, 79, 79);
+    transition-duration: 1s;
+
+}
+nav.dark{
+    background-color: rgb(12, 122, 122);
+    border-radius: 20px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 15%;
+    align-items: center;
+    height: 60px;
+    width: 100%;
+    box-shadow: 0px 0px 0px rgb(82, 79, 79);
+    transition-duration: 1s;
+}
+nav p {
+    transition-duration: 0.5s;
+}
+nav.dark p {
+    transition-duration: 0.5s;
+
+}
+nav p:hover {
+    color: rgb(255, 255, 255);
+    transition-duration: 0.5s;
+    transform: rotate(180deg);
+
+
+}
+nav.dark p :hover {
+    color: rgb(0, 0, 0);
+    transition-duration: 0.5s;
+
+}
+a:hover{
+        color: rgb(198, 255, 252);
+        transition-duration: 0.5s;
+    }
+a.dark :hover{
+        color: rgb(117, 216, 255);
+        transition-duration: 0.5s;
+    }
+
+nav button:hover{
+    background-color: rgb(141, 180, 224);
+    cursor: pointer;
+}
+nav button{
+        background-color: rgb(211, 209, 209);
+        color: rgb(0, 0, 0);
+        border-radius: 100%;
+        height: 60%;
+        width: 3%;
+        border-color: rgb(255, 255, 255);
+        border-image: initial;
+        border-style: solid;
+        
+    }
+    input {
+        background-color: black;
+    }
+nav img{
+    height: 50px;
+    width: 50px;
+    border-radius: 100%;
+
+}
+ul{
+    display: grid;
+    list-style: none;
+    grid-template-columns: repeat(4, 1fr);
+}
+li{
+    background-color: rgb(141, 180, 224);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgb(82, 79, 79);
+    height: 410px;
+    transition-duration: 1s;
+
+    
+}
+li div{
+    width: 220px;
+    line-clamp: 20px;
+     display: -webkit-box;
+    -webkit-line-clamp: 2;
+    overflow: hidden;       
+    text-overflow: ellipsis; /* Adiciona as reticências (...) quando o texto é truncado */
+    -webkit-box-orient: vertical;
+    line-height: 1.4; 
+}
+li.dark{
+    background-color: rgb(35, 64, 80);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    height: 410px;
+    box-shadow: 0px 0px 0px rgb(82, 79, 79);
+    transition-duration: 1s;
+
+}
+li.dark button {
+    border-color: rgb(35, 64, 80);
+    color: white;
+}
+ul.carrinho li {
+    background-color: rgb(141, 180, 224);
+    border-radius: 30px;
+    margin: 20px;
+    padding: 20px;
+    box-shadow: 0px 0px 3px rgb(82, 79, 79);
+    height: 100px;
+    transition-duration: 1s;
+}
+ul.carrinho li.dark{
+    background-color:  rgb(35, 64, 80);
+}
+h1 {
+ animation: girar 2s linear infinite;
+ color: rgb(35, 173, 207);
+ 
+}
+
+@media (max-width: 1024px){
+    ul{
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+@media (max-width: 768px){
+    ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+@media (max-width: 480px){
+    ul{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
+@keyframes girar {
+  from {
+    transform: rotate(0deg); 
+  }
+  to {
+    transform: rotate(360deg); 
+  }
+}
